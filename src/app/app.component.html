@@ -1,0 +1,28 @@
+
+<div class="container" >
+  <mat-toolbar color="primary" class="toolbar"  >
+    <button mat-icon-button (click)="menunav.toggle()"  >Menu</button>
+</mat-toolbar>
+  <mat-sidenav-container class="sidenav-container" >
+    <mat-sidenav style="width: 200px;" #menunav  fixedTopGap="56">
+      
+ 
+
+    <mat-list>
+      <mat-list-item>
+        <a mat-raised-button routerLink="/chanel" style="width: 15px;">Link1</a>
+      </mat-list-item>
+      <mat-list-item >
+        <a mat-raised-button routerLink="/epsisode"style="width: 50px;">Link</a>
+      </mat-list-item>
+    </mat-list>
+    
+    </mat-sidenav>
+    <mat-sidenav style="width: 300px;" #toolnav mode="over"  fixedTopGap="56"
+      position="end">
+    </mat-sidenav>
+    <mat-sidenav-content >
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
